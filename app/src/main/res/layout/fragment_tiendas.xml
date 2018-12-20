@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/departmentoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/underline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@color/underlineColor" />
+
+                <LinearLayout
+                    android:id="@+id/textLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/underline"
+                    android:layout_marginLeft="@dimen/largeMargin"
+                    android:layout_marginStart="@dimen/largeMargin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="bottom"
+                        android:text="@string/departamento"
+                        android:textColor="@color/headingTextColor"
+                        android:textSize="@dimen/headingSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/selectedDepartmentTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:text="@string/selectionOfDepartment"
+                        android:textSize="@dimen/textSize" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/dropDown1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/more_btn" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/departmenRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textLayout"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/municipioLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/underline2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:background="@color/underlineColor" />
+
+                <LinearLayout
+                    android:id="@+id/textLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/underline2"
+                    android:layout_marginLeft="@dimen/largeMargin"
+                    android:layout_marginStart="@dimen/largeMargin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="bottom"
+                        android:text="@string/municipio"
+                        android:textColor="@color/headingTextColor"
+                        android:textSize="@dimen/headingSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/selectedmunicipioTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:text="@string/selectionOfMunicipio"
+                        android:textSize="@dimen/textSize" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/dropDown2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/more_btn" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/municipioRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textLayout2"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/barrioLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/underline3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:background="@color/underlineColor" />
+
+                <LinearLayout
+                    android:id="@+id/textLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/underline3"
+                    android:layout_marginLeft="@dimen/largeMargin"
+                    android:layout_marginStart="@dimen/largeMargin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="bottom"
+                        android:text="@string/barrio"
+                        android:textColor="@color/headingTextColor"
+                        android:textSize="@dimen/headingSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/selectedBarrioTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:text="@string/selectionOfBarrio"
+                        android:textSize="@dimen/textSize" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/dropDown3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/more_btn" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/barrioRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textLayout3"
+                    android:visibility="gone" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_below="@+id/barrioRecyclerView"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:background="@color/underlineColor" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/buscarLayout"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/largeMargin"
+                android:background="@drawable/curved_blue_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_search_black_24dp"
+                    android:rotation="100"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:gravity="center"
+                    android:text="@string/buscar"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:progressTint="@color/colorPrimaryDark"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/listaMapaLayout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin">
+
+            <Button
+                android:id="@+id/list"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/smallMargin"
+                android:layout_weight="1"
+                android:background="@drawable/list_select"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/map"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/smallMargin"
+                android:layout_weight="1"
+                android:background="@drawable/map_unselect"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/map_view"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MapsActivity" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header" />
+
+
+        <RelativeLayout
+            android:id="@+id/markerClickLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66021995" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_above="@+id/cancelButton"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/to_open_with"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/wazeClick"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/waze" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/waze"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/color_blue"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="2dp"
+                        android:layout_height="60dp"
+                        android:background="#0000ff" />
+
+                    <LinearLayout
+                        android:id="@+id/googleMapClick"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/google" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/google_maps"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/color_blue"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_blue"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/listaMapaLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/backBtn"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:src="@drawable/back_btn"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_marginTop="@dimen/margin"-->
+            <!--android:layout_marginLeft="@dimen/margin"-->
+            <!--/>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/header"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginStart="@dimen/margin"-->
+            <!--android:layout_marginEnd="@dimen/margin">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/list"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/list_select"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="20sp"-->
+                <!--android:layout_margin="@dimen/smallMargin"/>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/map"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/map_unselect"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:visibility="gone"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="20sp"-->
+                <!--android:layout_margin="@dimen/smallMargin"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/mapLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_below="@+id/header">-->
+
+            <!--<fragment-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/map_view"-->
+                <!--tools:context=".MapsActivity"-->
+                <!--android:name="com.google.android.gms.maps.SupportMapFragment" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/listRecyclerView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/header"/>-->
+
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

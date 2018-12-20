@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/smallMargin"
+        android:background="@color/tabBackgroundColor"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabMode="fixed" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabLayout"
+        android:layout_below="@+id/headerText"
+        android:layout_marginLeft="@dimen/smallMargin"
+        android:layout_marginRight="@dimen/smallMargin"
+        android:layout_marginTop="@dimen/smallMargin" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="@string/tabOne"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/headerText"
+        android:background="@android:color/white" />
+
+</RelativeLayout>

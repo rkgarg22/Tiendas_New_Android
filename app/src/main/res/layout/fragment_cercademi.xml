@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <Button
+            android:id="@+id/list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/smallMargin"
+            android:layout_weight="1"
+            android:background="@drawable/list_select"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/map"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/smallMargin"
+            android:layout_weight="1"
+            android:background="@drawable/map_unselect"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/map_view"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MapsActivity" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:progressTint="@color/colorPrimaryDark"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/markerClickLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66021995" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_above="@+id/cancelButton"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/to_open_with"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/wazeClick"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/waze" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/waze"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/color_blue"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="60dp"
+                    android:background="#0000ff" />
+
+                <LinearLayout
+                    android:id="@+id/googleMapClick"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/google" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/google_maps"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/color_blue"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_blue"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

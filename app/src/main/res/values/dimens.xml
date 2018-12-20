@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="largeMargin">20dp</dimen>
+    <dimen name="textSize">13sp</dimen>
+    <dimen name="headingSize">16sp</dimen>
+    <dimen name="smallTextSize">11sp</dimen>
+    <dimen name="smallMargin">5dp</dimen>
+    <dimen name="tabHeight">48dp</dimen>
+    <dimen name="largeHeadingSize">20dp</dimen>
+</resources>

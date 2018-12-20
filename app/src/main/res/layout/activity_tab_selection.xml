@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="com.app.D1App.MainActivity">
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/home_screen_title"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/headerText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/smallMargin"
+            android:background="@drawable/curved_background"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:padding="7dp"
+                android:src="@drawable/ic_location"
+                android:tint="@color/tabSelectedIconColor" />
+
+            <TextView
+                android:id="@+id/tab1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:text="@string/tabOne"
+                android:textColor="@color/colorTabText"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/smallMargin"
+            android:background="@drawable/curved_background"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:padding="7dp"
+                android:src="@drawable/ic_shop"
+                android:tint="@color/tabSelectedIconColor" />
+
+            <TextView
+                android:id="@+id/tab2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:text="@string/tabTwo"
+                android:textColor="@color/colorTabText"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/smallMargin"
+            android:background="@drawable/curved_background"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:padding="7dp"
+                android:src="@drawable/setting"
+                android:tint="@color/tabSelectedIconColor" />
+
+            <TextView
+                android:id="@+id/tab3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:text="@string/tabThree"
+                android:textColor="@color/colorTabText"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

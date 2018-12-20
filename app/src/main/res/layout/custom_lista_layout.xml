@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/parentLayout"
+    android:layout_marginTop="@dimen/smallMargin">
+
+    <View
+        android:id="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:background="@color/underlineColor" />
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/underline"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:src="@drawable/background_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/distanceLayout"
+        android:layout_below="@+id/underline"
+        android:layout_toRightOf="@id/banner"
+        android:layout_toEndOf="@id/banner"
+        android:layout_marginLeft="-10dp"
+        android:gravity="center_vertical"
+        android:layout_toStartOf="@id/distanceLayout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/headingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="D1 Las Colinita"
+            android:textStyle="bold"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/headingTextColor"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginTop="2dp"
+            android:textSize="@dimen/smallTextSize"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/distanceLayout"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/smallTextSize"
+            android:gravity="center_horizontal"
+            android:text="100 MT" />
+    </LinearLayout>
+
+
+</RelativeLayout>

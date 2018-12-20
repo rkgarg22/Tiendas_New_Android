@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TIENDAS D1</string>
+    <string name="myGoogleKey">AIzaSyDkT34RgUIvzLQ15pcm_0n45w50GuZ6Rkg</string>
+    <string name="tabOne">CERCA DE MI</string>
+    <string name="tabTwo">TIENDAS</string>
+    <string name="tabThree">NUEVO</string>
+    <string name="ok">OK</string>
+    <string name="serverError">Server Error</string>
+    <string name="network_error">No Internet Connection.. Please try again</string>
+    <string name="departamento">Departamento</string>
+    <string name="selectionOfDepartment">Selecciona el Departamento</string>
+    <string name="municipio">Municipio</string>
+    <string name="selectionOfMunicipio">Selecciona el Municipio</string>
+    <string name="barrio">Barrio</string>
+    <string name="selectionOfBarrio">Selecciona el Barrio</string>
+    <string name="buscar">Buscar</string>
+
+    <string name="home_screen_title">BIENVENIDOS A</string>
+
+    <string name="to_open_with">Abrir con</string>
+    <string name="waze">Waze</string>
+    <string name="google_maps">Google Maps</string>
+    <string name="cancel">CANCELAR</string>
+</resources>

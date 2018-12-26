@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TIENDAS D1</string>
     <string name="myGoogleKey">AIzaSyDkT34RgUIvzLQ15pcm_0n45w50GuZ6Rkg</string>
+    <!--<string name="myGoogleKey">AIzaSyAajDW81YlRzoY0PPXBlSUxchAJ7FpBQIw</string>-->
     <string name="tabOne">CERCA DE MI</string>
     <string name="tabTwo">TIENDAS</string>
     <string name="tabThree">NUEVO</string>

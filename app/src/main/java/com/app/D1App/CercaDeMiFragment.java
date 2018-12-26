@@ -28,7 +28,6 @@ import com.app.D1App.ApiResponse.GetListingResponse;
 import com.app.D1App.MapRoute.DirectionsJSONParser;
 import com.app.D1App.MapRoute.MapAnimator;
 import com.app.D1App.Utils.AppCommon;
-import com.app.D1App.Utils.FusedLocationTracker;
 import com.app.D1App.Utils.GPSTracker;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -90,7 +89,7 @@ public class CercaDeMiFragment extends Fragment implements OnMapReadyCallback {
     private GoogleMap googleMap;
 
     ListaAdapter listaAdapter;
-    FusedLocationTracker gpsTracker;
+    GPSTracker gpsTracker;
     Call call;
     ArrayList<GetListObject> storeArrayList;
     private static final String MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey";
@@ -102,7 +101,7 @@ public class CercaDeMiFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cercademi, container, false);
         ButterKnife.bind(this, view);
-        gpsTracker = new FusedLocationTracker(getActivity());
+        gpsTracker = new GPSTracker(getActivity());
         listRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
@@ -212,8 +211,9 @@ public class CercaDeMiFragment extends Fragment implements OnMapReadyCallback {
             try {
                 for (int i = 0; i < storeArrayList.size(); i++) {
 
-                    LatLng latlog = new LatLng(Double.parseDouble(storeArrayList.get(i).getLatitude()),
-                            Double.parseDouble(storeArrayList.get(i).getLongitude()));
+                    Log.v("Name",storeArrayList.get(i).getTitle());
+                    LatLng latlog = new LatLng(Double.parseDouble(storeArrayList.get(i).getLatitude().trim()),
+                            Double.parseDouble(storeArrayList.get(i).getLongitude().trim()));
 
                     Marker marker = this.googleMap.addMarker(new MarkerOptions()
                             .position(latlog)
@@ -421,7 +421,7 @@ public class CercaDeMiFragment extends Fragment implements OnMapReadyCallback {
         String output = "json";
 
         // Building the url to the web service
-        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=AIzaSyDsAqjE4Se2KGtRJea_GywWaMSYahw_Nd4";
+        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=AIzaSyAajDW81YlRzoY0PPXBlSUxchAJ7FpBQIw";
 
 
         return url;

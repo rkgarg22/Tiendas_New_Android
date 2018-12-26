@@ -37,7 +37,6 @@ import com.app.D1App.ApiResponse.GetListingResponse;
 import com.app.D1App.MapRoute.DirectionsJSONParser;
 import com.app.D1App.MapRoute.MapAnimator;
 import com.app.D1App.Utils.AppCommon;
-import com.app.D1App.Utils.FusedLocationTracker;
 import com.app.D1App.Utils.GPSTracker;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -140,7 +139,7 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
     Call call;
     double latitude;
     double longitude;
-    FusedLocationTracker gpsTracker;
+    GPSTracker gpsTracker;
     private GoogleMap googleMap;
     ArrayList<GetListObject> storeArrayList;
     ArrayList<Marker> markerArrayList = new ArrayList<>();
@@ -159,7 +158,7 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tiendas, container, false);
         ButterKnife.bind(this, view);
-        gpsTracker = new FusedLocationTracker(getActivity());
+        gpsTracker = new GPSTracker(getActivity());
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map_view);
         mapFragment.getMapAsync(this);
@@ -534,8 +533,8 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
             try {
                 for (int i = 0; i < storeArrayList.size(); i++) {
 
-                    LatLng latlog = new LatLng(Double.parseDouble(storeArrayList.get(i).getLatitude()),
-                            Double.parseDouble(storeArrayList.get(i).getLongitude()));
+                    LatLng latlog = new LatLng(Double.parseDouble(storeArrayList.get(i).getLatitude().trim()),
+                            Double.parseDouble(storeArrayList.get(i).getLongitude().trim()));
 
                     Marker marker = this.googleMap.addMarker(new MarkerOptions()
                             .position(latlog)
@@ -648,7 +647,7 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
         String output = "json";
 
         // Building the url to the web service
-        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=AIzaSyDsAqjE4Se2KGtRJea_GywWaMSYahw_Nd4";
+        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=AIzaSyAajDW81YlRzoY0PPXBlSUxchAJ7FpBQIw";
 
 
         return url;

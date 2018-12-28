@@ -365,7 +365,9 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
 
         GetListObject storeObj = storeArrayList.get(position);
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.other_location);
-        LatLng markerLat = new LatLng(Double.parseDouble(storeObj.getLatitude()), Double.parseDouble(storeObj.getLongitude()));
+        latitude = storeObj.getLatitude().replace(",",".").trim();
+        longitude = storeObj.getLongitude().replace(",",".").trim();
+        LatLng markerLat = new LatLng(Double.parseDouble(latitude), Double.parseDouble(longitude));
         Marker marker = this.googleMap.addMarker(new MarkerOptions()
                 .position(markerLat)
                 .title(Html.fromHtml(storeObj.getTitle()).toString())
@@ -478,6 +480,14 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
         public void OnClickData(int position, String name, String comingFrom) {
             switch (comingFrom) {
                 case "D":
+                    if(!name.equals(departData)){
+                        municioSelData = getResources().getString(R.string.selectionOfMunicipio);
+                        barrioSelData = getResources().getString(R.string.selectionOfBarrio);
+                        selectedmunicipioTextView.setText(municioSelData);
+                        selectedBarrioTextView.setText(barrioSelData);
+                        municipioRecyclerView.removeAllViews();
+                        barrioRecyclerView.removeAllViews();
+                    }
                     departData = name;
                     selectedDepartmentTextView.setText(departData);
                     break;
@@ -533,8 +543,11 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
             try {
                 for (int i = 0; i < storeArrayList.size(); i++) {
 
-                    LatLng latlog = new LatLng(Double.parseDouble(storeArrayList.get(i).getLatitude().trim()),
-                            Double.parseDouble(storeArrayList.get(i).getLongitude().trim()));
+                    String latitude = storeArrayList.get(i).getLatitude().replace(",",".").trim();
+                    String longitude = storeArrayList.get(i).getLongitude().replace(",",".").trim();
+
+                    LatLng latlog = new LatLng(Double.parseDouble(latitude),
+                            Double.parseDouble(longitude));
 
                     Marker marker = this.googleMap.addMarker(new MarkerOptions()
                             .position(latlog)

@@ -345,8 +345,8 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
     void setOnClickAdapter(int position, String latitude, String longitude) {
         mapLayout.setVisibility(View.VISIBLE);
         listRecyclerView.setVisibility(View.GONE);
-         String currentLat = String.valueOf(gpsTracker.getLatitude());
-         String curretnLon = String.valueOf(gpsTracker.getLongitude());
+        String currentLat = String.valueOf(gpsTracker.getLatitude());
+        String curretnLon = String.valueOf(gpsTracker.getLongitude());
 
         //String currentLat = String.valueOf(6.217660);
         //String curretnLon = String.valueOf(-75.564220);
@@ -365,8 +365,8 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
 
         GetListObject storeObj = storeArrayList.get(position);
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.other_location);
-        latitude = storeObj.getLatitude().replace(",",".").trim();
-        longitude = storeObj.getLongitude().replace(",",".").trim();
+        latitude = storeObj.getLatitude().replace(",", ".").trim();
+        longitude = storeObj.getLongitude().replace(",", ".").trim();
         LatLng markerLat = new LatLng(Double.parseDouble(latitude), Double.parseDouble(longitude));
         Marker marker = this.googleMap.addMarker(new MarkerOptions()
                 .position(markerLat)
@@ -480,13 +480,17 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
         public void OnClickData(int position, String name, String comingFrom) {
             switch (comingFrom) {
                 case "D":
-                    if(!name.equals(departData)){
-                        municioSelData = getResources().getString(R.string.selectionOfMunicipio);
-                        barrioSelData = getResources().getString(R.string.selectionOfBarrio);
-                        selectedmunicipioTextView.setText(municioSelData);
-                        selectedBarrioTextView.setText(barrioSelData);
-                        municipioRecyclerView.removeAllViews();
-                        barrioRecyclerView.removeAllViews();
+                    if (!name.equals(departData)) {
+                        municioSelData = "";
+                        barrioSelData = "";
+                        selectedmunicipioTextView.setText(getResources().getString(R.string.selectionOfMunicipio));
+                        selectedBarrioTextView.setText(getResources().getString(R.string.selectionOfBarrio));
+                        if (municipioRecyclerView.getAdapter() != null) {
+                            ((TeindasAdapter) municipioRecyclerView.getAdapter()).cleanData();
+                        }
+                        if (barrioRecyclerView.getAdapter() != null) {
+                            ((TeindasAdapter) barrioRecyclerView.getAdapter()).cleanData();
+                        }
                     }
                     departData = name;
                     selectedDepartmentTextView.setText(departData);
@@ -543,8 +547,8 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
             try {
                 for (int i = 0; i < storeArrayList.size(); i++) {
 
-                    String latitude = storeArrayList.get(i).getLatitude().replace(",",".").trim();
-                    String longitude = storeArrayList.get(i).getLongitude().replace(",",".").trim();
+                    String latitude = storeArrayList.get(i).getLatitude().replace(",", ".").trim();
+                    String longitude = storeArrayList.get(i).getLongitude().replace(",", ".").trim();
 
                     LatLng latlog = new LatLng(Double.parseDouble(latitude),
                             Double.parseDouble(longitude));

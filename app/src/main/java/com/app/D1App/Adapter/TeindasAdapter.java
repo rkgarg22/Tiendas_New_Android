@@ -80,4 +80,9 @@ public class TeindasAdapter extends RecyclerView.Adapter<TeindasAdapter.MyViewHo
             notifyDataSetChanged();
         }
     }
+
+    public void cleanData(){
+        this.result.clear();
+        notifyDataSetChanged();
+    }
 }

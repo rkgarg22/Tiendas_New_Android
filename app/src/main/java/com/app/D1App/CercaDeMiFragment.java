@@ -289,11 +289,11 @@ public class CercaDeMiFragment extends Fragment implements OnMapReadyCallback {
     void setOnClickAdapter(int position, String latitude, String longitude, String name) {
         mapLayout.setVisibility(View.VISIBLE);
         listRecyclerView.setVisibility(View.GONE);
-         //String currentLat = String.valueOf(gpsTracker.getLatitude());
-         //String curretnLon = String.valueOf(gpsTracker.getLongitude());
+         String currentLat = String.valueOf(gpsTracker.getLatitude());
+         String curretnLon = String.valueOf(gpsTracker.getLongitude());
 
-        String currentLat = String.valueOf(6.217660);
-        String curretnLon = String.valueOf(-75.564220);
+        //String currentLat = String.valueOf(6.217660);
+        //String curretnLon = String.valueOf(-75.564220);
 
         LatLng currentUserLatLon = new LatLng(Double.parseDouble(currentLat), Double.parseDouble(curretnLon));
 

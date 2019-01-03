@@ -176,6 +176,7 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
         latitude = gpsTracker.getLatitude();
         longitude = gpsTracker.getLongitude();
 
+
         return view;
     }
 
@@ -515,7 +516,7 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
     void setOnSearchLayout() {
         if (!departData.isEmpty() && !municioSelData.isEmpty() && !barrioSelData.isEmpty()) {
             String latitude = AppCommon.getInstance(getActivity()).getLatitude();
-            String longiitude = AppCommon.getInstance(getActivity()).getLatitude();
+            String longiitude = AppCommon.getInstance(getActivity()).getLongitude();
             if (!latitude.isEmpty() && !longiitude.isEmpty()) {
                 callingFilterAPI(Double.parseDouble(latitude), Double.parseDouble(longiitude), departData, municioSelData, barrioSelData);
             } else {

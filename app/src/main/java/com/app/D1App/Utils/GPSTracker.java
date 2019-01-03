@@ -88,6 +88,9 @@ public class GPSTracker implements LocationListener {
                         if (location != null) {
                             latitude = location.getLatitude();
                             longitude = location.getLongitude();
+
+                            AppCommon.getInstance(mContext).setLatitude(latitude);
+                            AppCommon.getInstance(mContext).setLongitude(longitude);
                         }
                     }
                 }
@@ -106,6 +109,9 @@ public class GPSTracker implements LocationListener {
                             if (location != null) {
                                 latitude = location.getLatitude();
                                 longitude = location.getLongitude();
+
+                                AppCommon.getInstance(mContext).setLatitude(latitude);
+                                AppCommon.getInstance(mContext).setLongitude(longitude);
                             }
                         }
                     }

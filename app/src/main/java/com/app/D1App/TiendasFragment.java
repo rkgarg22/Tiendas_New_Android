@@ -495,14 +495,17 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
                     }
                     departData = name;
                     selectedDepartmentTextView.setText(departData);
+                    setDepartmentoLayout();
                     break;
                 case "M":
                     municioSelData = name;
                     selectedmunicipioTextView.setText(municioSelData);
+                    setMunicipioLayout();
                     break;
                 case "B":
                     barrioSelData = name;
                     selectedBarrioTextView.setText(barrioSelData);
+                    setBarrioLayout();
                     break;
             }
             if (departData.isEmpty() && municioSelData.isEmpty() && barrioSelData.isEmpty()) {

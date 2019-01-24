@@ -229,6 +229,7 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
                 callingFilterElementAPI("", "D", departmenRecyclerView);
             }
         }
+        updateBuscarButtonCloro();
     }
 
 
@@ -258,6 +259,7 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
             flag2 = true;
             flag3 = false;
         }
+        updateBuscarButtonCloro();
     }
 
     @OnClick(R.id.barrioLayout)
@@ -287,6 +289,16 @@ public class TiendasFragment extends Fragment implements OnMapReadyCallback {
             flag3 = true;
         }
 
+        updateBuscarButtonCloro();
+
+    }
+
+    public void updateBuscarButtonCloro() {
+        if (!departData.isEmpty() && !municioSelData.isEmpty() && !barrioSelData.isEmpty()) {
+            buscarLayout.setBackground(getResources().getDrawable(R.drawable.curved_blue_background));
+        } else {
+            buscarLayout.setBackground(getResources().getDrawable(R.drawable.curved_dull_background));
+        }
     }
 
     @OnClick(R.id.map)

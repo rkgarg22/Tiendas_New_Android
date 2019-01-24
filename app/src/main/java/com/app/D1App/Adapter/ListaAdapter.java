@@ -49,7 +49,7 @@ public class ListaAdapter extends RecyclerView.Adapter<ListaAdapter.MyViewHolder
         holder.headingText.setText(result.get(position).getTitle());
         holder.addressText.setText(result.get(position).getAddress());
         if (result.get(position).getDistance() != null)
-            holder.distance.setText(String.format("%.2f", result.get(position).getDistance()) + "");
+            holder.distance.setText(String.format("%.2f", result.get(position).getDistance()) + " Km");
     }
 
     @Override

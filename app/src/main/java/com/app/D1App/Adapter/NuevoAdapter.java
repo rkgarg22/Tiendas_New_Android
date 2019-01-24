@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.app.D1App.ApiResponse.GetBannerResponse;
 import com.app.D1App.R;
@@ -30,13 +31,18 @@ public class NuevoAdapter extends RecyclerView.Adapter<NuevoAdapter.MyViewHolder
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view= LayoutInflater.from(mContext).inflate(R.layout.nuevo_custom_layout, viewGroup, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.nuevo_custom_layout, viewGroup, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
         myViewHolder.imageView.setImageURI(response.getResult().get(i).getImgUrl());
+//        if (i == 0) {
+//            myViewHolder.imageView.setBackground(mContext.getResources().getDrawable(R.drawable.imag1));
+//        } else {
+//            myViewHolder.imageView.setBackground(mContext.getResources().getDrawable(R.drawable.imag2));
+//        }
     }
 
     @Override
@@ -51,7 +57,7 @@ public class NuevoAdapter extends RecyclerView.Adapter<NuevoAdapter.MyViewHolder
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+            ButterKnife.bind(this, itemView);
         }
     }
 }

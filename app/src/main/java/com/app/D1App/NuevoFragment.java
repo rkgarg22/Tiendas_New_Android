@@ -37,6 +37,8 @@ public class NuevoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_nuevo, container, false);
         ButterKnife.bind(this, view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+
+        //setBannerAdapter(null);
         callingBannerAPI();
         return view;
     }

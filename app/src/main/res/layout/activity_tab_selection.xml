@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
+    android:gravity="center"
     tools:context="com.app.D1App.MainActivity">
 
     <TextView
         android:id="@+id/headerText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/home_screen_title"
         android:textColor="@android:color/white"

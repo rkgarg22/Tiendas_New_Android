@@ -296,7 +296,6 @@ public class CercaDeMiFragment extends Fragment implements OnMapReadyCallback {
         //String curretnLon = String.valueOf(-75.564220);
 
         LatLng currentUserLatLon = new LatLng(Double.parseDouble(currentLat), Double.parseDouble(curretnLon));
-
         this.googleMap.clear();
         if (currentUserLatLon != null) {
             BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.current_location);

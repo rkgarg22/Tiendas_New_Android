@@ -11,7 +11,7 @@
         android:layout_marginStart="@dimen/margin"
         android:layout_marginEnd="@dimen/margin">
 
-        <Button
+        <com.app.D1App.CustomControl.LatoBoldButton
             android:id="@+id/list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -22,7 +22,7 @@
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
-        <Button
+        <com.app.D1App.CustomControl.LatoBoldButton
             android:id="@+id/map"
             android:layout_width="0dp"
             android:layout_height="match_parent"

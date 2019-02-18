@@ -30,15 +30,14 @@
         android:layout_marginRight="@dimen/smallMargin"
         android:layout_marginTop="@dimen/smallMargin" />
 
-    <TextView
+    <com.app.D1App.CustomControl.LatoBoldTextView
         android:id="@+id/headerText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:gravity="center"
         android:text="@string/tabOne"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp" />
 
     <View
         android:layout_width="match_parent"

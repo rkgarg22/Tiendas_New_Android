@@ -34,7 +34,7 @@
         android:layout_toStartOf="@id/distanceLayout"
         android:orientation="vertical">
 
-        <TextView
+        <com.app.D1App.CustomControl.LatoBoldTextView
             android:id="@+id/headingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
             android:textColor="@color/headingTextColor"
             android:gravity="center_vertical" />
 
-        <TextView
+        <com.app.D1App.CustomControl.LatoMediumTextView
             android:id="@+id/addressText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             android:layout_height="20dp"
             android:src="@drawable/ic_location" />
 
-        <TextView
+        <com.app.D1App.CustomControl.LatoMediumTextView
             android:id="@+id/distance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

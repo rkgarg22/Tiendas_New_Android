@@ -6,9 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
-/**
- * Created by Imark on 9/17/2018.
- */
 
 public class SplashActivity extends AppCompatActivity {
 

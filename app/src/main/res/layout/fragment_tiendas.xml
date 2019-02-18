@@ -39,7 +39,7 @@
                     android:layout_marginStart="@dimen/largeMargin"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.app.D1App.CustomControl.LatoBoldTextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
@@ -49,7 +49,7 @@
                         android:textSize="@dimen/headingSize"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <com.app.D1App.CustomControl.LatoSemiBoldTextView
                         android:id="@+id/selectedDepartmentTextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -100,7 +100,7 @@
                     android:layout_marginStart="@dimen/largeMargin"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.app.D1App.CustomControl.LatoBoldTextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
@@ -110,7 +110,7 @@
                         android:textSize="@dimen/headingSize"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <com.app.D1App.CustomControl.LatoSemiBoldTextView
                         android:id="@+id/selectedmunicipioTextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -161,7 +161,7 @@
                     android:layout_marginStart="@dimen/largeMargin"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.app.D1App.CustomControl.LatoBoldTextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
@@ -171,7 +171,7 @@
                         android:textSize="@dimen/headingSize"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <com.app.D1App.CustomControl.LatoSemiBoldTextView
                         android:id="@+id/selectedBarrioTextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -226,7 +226,7 @@
                     android:src="@drawable/ic_search_black_24dp"
                     android:rotation="100"/>
 
-                <TextView
+                <com.app.D1App.CustomControl.LatoBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin"

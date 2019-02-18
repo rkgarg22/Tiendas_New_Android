@@ -7,7 +7,7 @@
     android:gravity="center"
     tools:context="com.app.D1App.MainActivity">
 
-    <TextView
+    <com.app.D1App.CustomControl.LatoBoldTextView
         android:id="@+id/headerText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -15,8 +15,7 @@
         android:gravity="center"
         android:text="@string/home_screen_title"
         android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textSize="25sp" />
 
     <ImageView
         android:id="@+id/logo"
@@ -54,7 +53,7 @@
                 android:src="@drawable/ic_location"
                 android:tint="@color/tabSelectedIconColor" />
 
-            <TextView
+            <com.app.D1App.CustomControl.LatoSemiBoldTextView
                 android:id="@+id/tab1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -83,7 +82,7 @@
                 android:src="@drawable/ic_shop"
                 android:tint="@color/tabSelectedIconColor" />
 
-            <TextView
+            <com.app.D1App.CustomControl.LatoSemiBoldTextView
                 android:id="@+id/tab2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -112,7 +111,7 @@
                 android:src="@drawable/setting"
                 android:tint="@color/tabSelectedIconColor" />
 
-            <TextView
+            <com.app.D1App.CustomControl.LatoSemiBoldTextView
                 android:id="@+id/tab3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

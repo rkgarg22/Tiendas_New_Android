@@ -3,7 +3,7 @@
     <color name="colorPrimary">#FE3000</color>
     <color name="colorPrimaryDark">#e72c00</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorTabText">#757575</color>
+    <color name="colorTabText">#525252</color>
     <color name="backgroundColor">#EF3923</color>
     <color name="headingTextColor">#005697</color>
     <color name="tabSelectedIconColor">#3080B4</color>

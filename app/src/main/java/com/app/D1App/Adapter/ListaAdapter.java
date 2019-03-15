@@ -21,9 +21,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by kartikeya on 09/11/2018.
- */
 
 public class ListaAdapter extends RecyclerView.Adapter<ListaAdapter.MyViewHolder> {
 
@@ -50,6 +47,12 @@ public class ListaAdapter extends RecyclerView.Adapter<ListaAdapter.MyViewHolder
         holder.addressText.setText(result.get(position).getAddress());
         if (result.get(position).getDistance() != null)
             holder.distance.setText(String.format("%.2f", result.get(position).getDistance()) + " Km");
+
+        if(result.get(position).getIsNew().toLowerCase().equals("yes")){
+            holder.banner.setVisibility(View.VISIBLE);
+        }else{
+            holder.banner.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
